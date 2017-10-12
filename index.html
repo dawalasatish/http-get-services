@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl"> 
+
+<p>Today's welcome message is:</p>
+
+  <div class="row">
+            <div class="col-md-12 col-lg-12">
+        <div class="table-responsive">
+
+                
+              <table id="mytable" class="table table-hover table-bordred table-striped">
+                   
+                   <thead class="thead-inverse">
+                   
+                   <th>S.no</th>
+                   <th>First Name</th>
+                     <th >Address</th>
+                     <th>Postal No</th>
+                     <th>City</th>
+                     <th>TEL No</th>
+                    
+                      
+                       <th><button type="button" class="btn btn-primary">New</button> </th>
+                   </thead>
+    <tbody>
+    
+    <tr ng-repeat="x1 in Details">
+        <td>{{$index+1}}</td>
+        <td>{{x1.sha}}</td>
+        <td>{{x1.url}}</td>
+        <td>{{x1.commit.committer.name}}</td>
+        <td>{{x1.events_url}}</td>
+        <td class="text-center"><p><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    </tr>
+    
+    </tbody>
+    </table>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
